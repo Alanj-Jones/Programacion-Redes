@@ -1,0 +1,62 @@
+body, html{
+    margin: 0%;
+    padding: 0%;
+    background-color: #D2D1D3;
+    box-sizing: border-box;
+}
+h1{
+  text-align: center;  
+  padding: 1%;
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 2em;
+}
+
+div.container{
+    background-color:#F3F1DA;   
+    height: 75vh;
+    display: flexbox;
+    position: relative;
+    padding: 1%;    
+}
+form.myForm input,select{
+    width: 45vw;
+    height: 6vh;
+    margin-top: 0vh;
+    margin-bottom: 4vh;
+}
+.myForm{
+    display:flexbox;
+    position: relative;
+}
+.right{
+    float: right;
+}
+.left{
+    float: left;
+}
+.elementoOptionSelect{
+    width: 45vw;
+    height: 6vh;
+    background-color: green;
+}
+@media(max-width:600px){
+    .myForm{
+        display: block;
+        float: left;
+        margin-top: 0%;
+        margin-bottom: 0%;
+        height: 1vh;
+    }
+    .container{
+        height: 1vh;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+    }
+
+}

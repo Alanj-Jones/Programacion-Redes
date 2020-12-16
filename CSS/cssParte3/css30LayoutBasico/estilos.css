@@ -1,0 +1,55 @@
+*{
+	padding: 0;
+	margin:0;
+	box-sizing: border-box;
+}
+body,html{
+	height: 100%;
+}
+
+div.mainContainer{
+	background-color: lightgrey;
+	width: 80%;
+	height: 100%;
+	margin: auto;	
+}
+
+div.menu{
+	height: 75%;
+	width: 15%;
+	background-color:#D6AAA0;
+	float: left; 
+	margin-top: 5%;
+	justify-content: center;
+	text-align: center;
+	padding-top: 40px;
+	
+
+}
+
+div.contenido{
+	height: 75%;
+	width: 85%;
+	overflow: auto;
+	background-color: beige;
+	margin-top: 5%;
+	font-size: 22px;
+	padding: 15px;
+}
+footer{
+	position: static;
+	font-size: 2em;
+	text-align: center;
+
+}
+
+div.test{
+	width: 80%;
+	height: 7%;
+	background-color: yellow;
+	margin: auto;
+	justify-content: center;
+	display: flex;
+	text-align: center;
+	
+}

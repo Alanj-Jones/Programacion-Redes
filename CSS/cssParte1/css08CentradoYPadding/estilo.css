@@ -1,0 +1,20 @@
+div{
+	width: 50%;
+	margin: auto;
+}
+div.primerDiv{
+	
+	background-color: lightblue;
+	
+}
+div.segundoDiv{
+	background-color: green;
+	padding-left: 10%;
+	padding-right: 10%;
+}
+div.tercerDiv{
+	background-color: grey;
+	box-sizing: border-box;
+	padding-left: 10%;
+	padding-right: 10%;
+}

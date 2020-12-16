@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<title>Ejercicio 02: Selectores de Clase.</title>
+	<style type="text/css">
+		
+		.claseDestacado{/*A este estilo no lo especifique para que sea solo para un parrafo o un span ya que lo voy a usar para ambos.*/
+			font-weight: bold;
+		} 
+		p.claseAcotacion{
+			font-style: italic;
+			color: blue;
+			border-style: solid;
+			border-color: blue black red yellow;
+			text-align: center;
+		}
+
+		p.claseAyuda{
+			color: pink;
+			border-style: solid;
+			border-color: pink;
+			font-style: bold;
+			width: 50%;
+			text-align: center;
+		}
+
+		p.claseContenidoComun{
+			text-align: left;
+			font-size: 12px;
+		}
+
+		p#idUnico{
+			color: red;
+			border-style: solid;
+			border-color: red;			
+			width: 25%;
+			text-align: center;
+			font-size: 14px;
+		}
+
+		img.ImagenAl50{
+			width: 50%;
+			height: 500px;
+		}
+
+	</style>
+</head>
+<body>
+	<h1>En esta pagina no se deben escribir etiquetas con atributo style</h1>
+	<h2>Todo el estilo se encuentra definido en la etiqueta style definida dentro de la etiqueta head del documento</h2>
+	<p>Este parrafo contiene un grupo de palabras delimitado por una etiqueta span. El comienzo es aqui:
+		<span class="claseDestacado">
+			grupo de palabras destacdas con el estilo claseDestcado
+		</span>
+	</p>
+	<p class="claseAcotacion">Este parrafo toma el estilo definido en la etiqueta style en el header del documento como clase"claseAcotacion"</p>
+	<p class="claseDestacado">Este parrfo toma el estilo definido en la etiqueta style del header del documento como class ="claseDestacado"</p>
+	<p class="claseAyuda">Este parrfo toma el estilo definido en la etiqueta style del header del documento como class ="claseAyuda"</p>
+	<p class="claseContenidoComun">Este parrfo toma el estilo definido en la etiqueta style del header del documento como class ="claseContenidoComun"</p>
+	<p id="idUnico">Parrafo formateado por un estilo particular definido en el style del documento para un parrafo especifico id="idUnico"</p>
+	<h1>
+	Todas las imagenes con class="ImagenAl50" en esta pagina se encuentran limitadas al 50% del ancho del viewport mas alla de su tamaño real en pixeles
+	</h1>
+	<img src="Gato.jpg" class="ImagenAl50">
+
+</body>
+</html>

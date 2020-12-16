@@ -1,0 +1,92 @@
+body{
+	height: 100%;
+	background-color: royalblue;
+	margin: 0;
+}
+h1{
+	color: white;
+	text-align: center;
+	margin: 0;
+}
+
+div.container{
+	position: absolute;
+	height: 40%;
+	overflow: auto;
+	box-sizing: border-box;
+}
+
+thead, th{
+	color: white;
+	background-color: salmon;
+	position: sticky;
+	top: 0;
+}
+tr{
+	height: 50px;
+}
+
+tbody tr:nth-child(odd) {
+background: #05889F;
+}
+tbody tr:nth-child(even) {
+background: #016879;
+}
+
+
+table{
+	width: 100%;
+	display: table;
+}
+
+
+
+
+[campo-dato='Id']{
+	width: 5%;
+}
+
+[campo-dato='Nick']{
+	width: 12%;
+}
+
+[campo-dato='Mail']{
+	width: 30%;
+}
+
+[campo-dato='Web']{
+	width: 30%;
+}
+
+[campo-dato='Twitter']{
+	width: =15%;
+}
+
+[campo-dato='Skype']{
+	width: 8%;
+}
+
+
+@media(max-width: 1200px){
+	[campo-dato='Skype']{
+		display: none;
+	}
+}
+
+@media(max-width: 1000px){
+	[campo-dato='Twitter']{
+		display: none;
+	}
+}
+
+@media(max-width: 800px){
+	[campo-dato='Web']{
+		display: none;
+	}
+}
+
+@media(max-width: 600px){
+	[campo-dato='Mail']{
+		display: none;
+	}
+}

@@ -1,0 +1,41 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+div.spacer{
+    width: 200px; 
+    height: 250px; 
+    display:block;
+}
+
+.clase1 ul{
+    width: 20%; 
+    height: 25%;
+    background-color: lavender;
+    position: absolute;
+    list-style-type:lower-alpha;
+    border: solid;
+ }
+
+ .clase2 ul{
+    width: 40%; 
+    height: 25%;
+    background-color: blueviolet;
+    position: absolute;
+    list-style-type: lower-greek;
+    border: solid;
+ }
+
+ .clase3 ul{
+    width: 15%; 
+    height: 25%;
+    background-color: goldenrod;
+    position: absolute;
+    list-style-type: armenian;
+    border: skyblue ridge;
+ }
+ 
+ 
+ 

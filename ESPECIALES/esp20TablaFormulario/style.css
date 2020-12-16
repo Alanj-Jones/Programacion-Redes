@@ -1,0 +1,160 @@
+body,html{
+    height: 100vh;
+    width: 100vh;
+    background-color: darksalmon;
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}   
+
+div.topContainer{
+    display: inline-flex;
+    justify-content: center;
+    margin-left: 35vw;
+}
+button{
+    width: 10vw;
+    margin-left: 2vw;    
+}
+
+footer{
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    text-align: center;
+    font-size: 2em;
+}
+
+table.myTable{
+    margin-top: 1vh;
+    border-style: solid;
+    border-color: black;
+    height: 80%;
+    width: 100%;
+    border-collapse: collapse;
+    display: block;
+   
+}
+table.myTable thead tr th,
+table.myTable tfoot tr th{
+    height: 8vh;
+    width: 16.5vw;
+    border-right: solid;
+    border-top: solid;
+    border-bottom: solid;
+       
+}
+tfoot{
+    height: 8vh;
+    border-right: solid;
+    border-top: solid;
+    border-bottom: solid;
+    width: 100%;
+     
+}
+div.container{
+    width: 100vw;
+    height: 75vh;
+}
+tbody{
+    background: lightgreen;
+    height: 60vh;
+    width: 100%;
+    overflow-y: scroll;
+
+    
+}
+tbody tr td{
+    height: 5vh;
+    position: relative;
+    width: auto;    
+}
+div.modal{
+	position: fixed;
+	top: 10%;
+	left: 25%;	
+    overflow-y: auto;
+    overflow-x: hidden;
+  
+    width: 60%;
+        
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 1em;
+}
+
+div.container2{
+    background-color:pink;   
+    height: 37.5vh;
+    display: flexbox;
+    position: relative;
+    padding: 1%;    
+}
+form.myForm input,select{
+    width: 22.5vw;
+    height: 3vh;
+    margin-top: 0vh;
+    margin-bottom: 2vh;
+}
+.myForm{
+    display:flexbox;
+    position: relative;
+}
+.right{
+    float: right;
+}
+.left{
+    float: left;
+}
+.elementoOptionSelect{
+    width: 45vw;
+    height: 6vh;
+    background-color: green;
+}
+@media(max-width:600px){
+    .myForm{
+        display: block;
+        float: left;
+        margin-top: 0%;
+        margin-bottom: 0%;
+        height: 1vh;
+    }
+    .container2{
+        height: 1vh;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+    }
+    .modal{
+        height: 60vh;
+        background-color: white;
+    }
+    footer{
+        visibility: hidden;
+    }
+
+}
+
+.exit{
+    float: right;
+ 
+}
+
+.ventanaModalApagado {
+    visibility:hidden;
+}
+.ventanaModalPrendido {
+    visibility:visible;
+}
+.contenedorActivo {
+    opacity:1;
+    pointer-events: auto;
+}
+.contenedorDesactivado{
+    pointer-events: none;
+    opacity: 0.3;
+}

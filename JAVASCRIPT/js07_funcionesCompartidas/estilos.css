@@ -1,0 +1,56 @@
+html,body{
+	margin: 0;
+	padding:0;
+	box-sizing: content-box;
+	height: 100%;
+	width: 100%;
+}
+
+div.mainContainer{
+	background-color: lightgrey;
+	height: 50%;
+	width: 50%;
+	margin: auto;
+	display: block;
+}
+input{
+	width: 80%;
+	text-align: right;
+	margin-left: 9%;
+	margin-top: 2%; 
+}
+
+div.numContainer{
+	box-sizing: border-box;
+	padding: 20px;
+	display: flex;
+	background-color: lightblue;
+	width: 80%;
+	height: 45%;
+	margin: auto;
+	flex-wrap: wrap;
+
+}
+button.num{
+	margin-left: 20px;
+	height: 15%;
+	width: 29%;
+	margin: auto;
+}
+
+div.operaciones{
+	height: 40%;
+	width: 80%;
+	background-color: white;
+	margin: auto;
+	box-sizing: border-box;
+	display: flex;
+	flex-wrap: wrap;
+
+}
+
+button.op{
+	width: 45%;
+	height: 40%;
+	margin: auto;
+}

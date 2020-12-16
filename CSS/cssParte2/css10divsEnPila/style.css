@@ -1,0 +1,71 @@
+div.mainContainer{
+	background-color: lightblue;
+	margin: auto;
+	height: 100%;
+	width: 80%;
+	border-style: solid;
+}
+div.firstContainer{
+	background: linear-gradient(45deg,orange,white,pink);
+	justify-content: center;
+	display: flex;
+	align-items: center;
+	box-shadow: 16px 8px 2px rgba(0,0,0,0.3);
+	width: 20%;
+	height: 150px;
+	margin: auto;
+	border-radius: 10px;
+}
+
+div.secondContainer{
+	width: 20%;
+	height: 150px;
+	margin: auto;
+	justify-content: center;
+	display: flex;
+	align-items: center;
+	margin: auto;
+	border-radius: 10px;
+	background: radial-gradient(orange,white,pink);
+	font-size: 24px;
+	font-weight: bold;
+}
+
+div.thirdContainer{
+	width: 20%;
+	height: 150px;
+	margin: auto;
+	justify-content: center;
+	display: flex;
+	align-items: center;
+	margin: auto;
+	border-radius: 10px;
+	background: linear-gradient(67.5deg,orange, white, pink);
+}
+
+img.imgInContainer{
+	float: right;
+	max-height: 75px; 
+	max-width: 50%;		/*Ocupa la mitad del div de ancho y de alto*/
+}
+
+div.fourthContainer{
+	width: 20%;
+	height: 150px;
+	margin: auto;	
+	display: flex;	
+	margin: auto;
+	border-radius: 10px;
+	background: linear-gradient(-45deg,orange, white, pink);
+	box-shadow: 16px 8px 2px rgba(0,0,0,0.3);
+}
+
+div.fifthContainer{
+	width: 20%;
+	height: 150px;
+	margin: auto;	
+	display: flex;	
+	margin: auto;
+	border-radius: 10px;
+	background: linear-gradient(45deg,orange, white, pink);
+}

@@ -1,0 +1,100 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+    background-color: lightblue;
+}
+
+div.modal{
+	position: fixed;
+	top: 10%;
+	left: 25%;	
+    overflow-y: auto;
+    overflow-x: hidden;
+  
+    width: 60%;
+        
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 1em;
+}
+
+div.container{
+    background-color:pink;   
+    height: 37.5vh;
+    display: flexbox;
+    position: relative;
+    padding: 1%;    
+}
+form.myForm input,select{
+    width: 22.5vw;
+    height: 3vh;
+    margin-top: 0vh;
+    margin-bottom: 2vh;
+}
+.myForm{
+    display:flexbox;
+    position: relative;
+}
+.right{
+    float: right;
+}
+.left{
+    float: left;
+}
+.elementoOptionSelect{
+    width: 45vw;
+    height: 6vh;
+    background-color: green;
+}
+@media(max-width:600px){
+    .myForm{
+        display: block;
+        float: left;
+        margin-top: 0%;
+        margin-bottom: 0%;
+        height: 1vh;
+    }
+    .container{
+        height: 1vh;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+    }
+    .modal{
+        height: 60vh;
+        background-color: white;
+    }
+    footer{
+        visibility: hidden;
+    }
+
+}
+
+.exit{
+    float: right;
+ 
+}
+
+.ventanaModalApagado {
+    visibility:hidden;
+}
+.ventanaModalPrendido {
+    visibility:visible;
+}
+.contenedorActivo {
+    opacity:1;
+    pointer-events: auto;
+}
+.contenedorDesactivado{
+    pointer-events: none;
+    opacity: 0.3;
+}

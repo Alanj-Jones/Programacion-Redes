@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej 3 especiales</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="contenedor" id="contenedor">
+        <h1>Esto es el div contenedor</h1>
+        <button id="modal">Abrir ventana modal</button>
+    </div>
+    <div class="modall">
+        <div class="modal">        
+
+            <div class="container" id="ventanaModal">
+                <h1>Formulario de ALTA</h1>
+                
+                <form action="./respuesta.html" name="Formulario" target="_blank" class="myForm">
+                    <button class="exit">X</button>
+                    <div class="left">
+                        <label for="codArt">Codigo del Articulo</label>
+                        <br>
+                        <input name="codArt" type="numeber" max="999" min="1" required placeholder="Entre 1 y 999">
+                    </div>
+                
+                    <br>
+
+                    <div class="right">
+                        <label for="famArt">Familia de Articulo</label>
+                        <br>
+                        <select id="mySelect" required name="famArt"></select> 
+                    </div>
+                    
+                    <br>
+
+                    <div class="left">
+                        <label for="famArt">Descripcion</label>
+                        <br>
+                        <input type="text" name="famArt" required>
+                    </div>
+                    
+                    <br>
+                    
+                    <div class="right">
+                        <label for="feAlta">Fecha Alta</label>
+                        <br>
+                        <input name="feAlta" type="date" required>
+                    </div>
+                    
+                    <br>
+        
+                    <div class="left">
+                        <label for="mStock">Stock</label>
+                        <br>
+                        <input name="nStock" max="10000" min="0" required>
+                    </div>
+                    
+                    <br>
+
+                    <div class="right">
+                        <label for="sub"></label>
+                        <input name="sub" type="submit">
+                    </div>
+                    
+                    <br>
+
+                </form>
+                <footer>PIE DEL FORMULARIO</footer>
+            </div>
+            
+        </div>
+    </div>
+    
+
+    <script src="../jquery.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>

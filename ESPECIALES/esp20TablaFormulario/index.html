@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" >
+    <title>Ej especil 2</title>
+</head>
+<body>
+    <div id="ejTablas">
+        <div class="topContainer">
+            <h1>Articulos</h1>
+            <button id="cargarDatos">Cargar Datos</button>
+            <button id="limpiarDatos">Borrar</button>
+            <button id="modal">Mostrar ventana modal</button>
+            </div>  
+        <div class="container">
+            <table class="myTable">
+
+                <thead>
+                    <tr>
+                        <th>CodArt</th>
+                        <th>Familia</th>
+                        <th>UM</th>
+                        <th>Descripcion</th>
+                        <th>Fecha Alta</th>
+                        <th>SaldoStock</th>
+                    </tr>
+                </thead>
+                
+                <tbody id="myTbody" class="myTableBody">            
+                    
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th>CodArt</th>
+                        <th>Familia</th>
+                        <th>UM</th>
+                        <th>Descripcion</th>
+                        <th>Fecha Alta</th>
+                        <th>SaldoStock</th>
+                    </tr>
+
+                </tfoot>
+
+            </table>
+        </div>
+    </div>
+
+    <!--FORMULARIO-->
+    <div class="modal">        
+
+        <div class="container2" id="ventanaModal">
+            <h1>Formulario de ALTA</h1>
+            
+            <form action="./respuesta.html" name="Formulario" target="_blank" class="myForm">
+                <button class="exit">X</button>
+                <div class="left">
+                    <label for="codArt">Codigo del Articulo</label>
+                    <br>
+                    <input name="codArt" type="numeber" max="999" min="1" required placeholder="Entre 1 y 999">
+                </div>
+            
+                <br>
+
+                <div class="right">
+                    <label for="famArt">Familia de Articulo</label>
+                    <br>
+                    <select id="mySelect" required name="famArt"></select> 
+                </div>
+                
+                <br>
+
+                <div class="left">
+                    <label for="famArt">Descripcion</label>
+                    <br>
+                    <input type="text" name="famArt" required>
+                </div>
+                
+                <br>
+                
+                <div class="right">
+                    <label for="feAlta">Fecha Alta</label>
+                    <br>
+                    <input name="feAlta" type="date" required>
+                </div>
+                
+                <br>
+    
+                <div class="left">
+                    <label for="mStock">Stock</label>
+                    <br>
+                    <input name="nStock" max="10000" min="0" required>
+                </div>
+                
+                <br>
+
+                <div class="right">
+                    <label for="sub"></label>
+                    <input name="sub" type="submit">
+                </div>
+                
+                <br>
+
+            </form>
+            <footer>PIE DEL FORMULARIO</footer>
+        </div>
+        
+    </div>
+    
+    
+    
+    
+    
+    
+    <footer>PIE</footer>
+    <script src="../jquery.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>

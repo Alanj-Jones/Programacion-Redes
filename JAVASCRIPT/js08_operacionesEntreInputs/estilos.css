@@ -1,0 +1,16 @@
+html, body{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	height: 100%;
+	width: 100%;
+}
+div.container{
+	background-color: orange;
+	height: auto;
+	width: 100%;
+	padding: 20px;
+}
+input{	
+	display: block;
+}

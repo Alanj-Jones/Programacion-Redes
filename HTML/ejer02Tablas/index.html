@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+	<title>Ejercicio 2 : Tablas</title>
+</head>
+<body>
+	<style type="text/css">
+		.matriz{
+			width:70px;
+			height:30px;
+			border:solid;
+		}
+		.salmon{
+			background-color: salmon;
+		}
+	</style>
+
+	<h1>TABLAS</h1>
+	<h3>Tabla representando la matriz completa</h3>
+	<table style="border-style: solid; border-collapse: collapse;">
+		<tr>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>			
+		</tr>
+		<tr>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>			
+		</tr>
+		<tr>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>			
+		</tr>
+		<tr>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>			
+		</tr>
+		<tr>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>			
+		</tr>
+		<tr>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>			
+		</tr>
+		<tr>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>			
+		</tr>
+		<tr>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>
+			<td class="matriz"></td>			
+		</tr>
+	</table>
+	<p>	Esta tabla la cree usando el tag 'Table' dentro del cual use'tr' y 'td'.
+		<br>
+		Ademas de eso le sume una clase de estilos llamada 'matriz' definiendole ancho, alto y estilo de borde.
+	</p>
+	<hr>
+	<H3>Tabla agrupando celdas y agregando estilos</H3>
+	<table style="border-style: solid; border-collapse: collapse;">
+
+		<tr style="background-color: salmon">
+			<td class="matriz" colspan="2" rowspan="2">Espacio en en blanco</td>			
+			<td class="matriz" colspan="3">Lunes</td>
+			<td class="matriz" colspan="3">Martes</td>
+			<td class="matriz" colspan="3">Miercoles</td>
+			<td class="matriz" colspan="3">Jueves</td>
+			<td class="matriz" colspan="3">Viernes</td>			
+		</tr>
+
+		<tr style="background-color: salmon">
+			<td class="matriz">M</td>			
+			<td class="matriz">T</td>
+			<td class="matriz">N</td>
+			<td class="matriz">M</td>
+			<td class="matriz">T</td>
+			<td class="matriz">N</td>
+			<td class="matriz">M</td>
+			<td class="matriz">T</td>
+			<td class="matriz">N</td>
+			<td class="matriz">M</td>
+			<td class="matriz">T</td>
+			<td class="matriz">N</td>
+			<td class="matriz">M</td>
+			<td class="matriz">T</td>
+			<td class="matriz">N</td>
+		</tr>
+
+		<tr>
+			<td class="matriz" rowspan="3" style="background-color: salmon">LAB 1</td>			
+			<td class="matriz" style="background-color: salmon">PC 1</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+		</tr>
+
+		<tr>
+			<td class="matriz" style="background-color: salmon">PC 2</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+		</tr>
+
+		<tr>			
+			<td class="matriz"style="background-color: salmon">PC 3</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+		</tr>
+
+		<tr>
+			<td class="matriz" rowspan="3" style="background-color: salmon">LAB 2</td>			
+			<td class="matriz" style="background-color: salmon">PC 1</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+		</tr>
+
+		<tr>
+			<td class="matriz"style="background-color: salmon">PC 2</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+		</tr>
+
+		<tr>			
+			<td class="matriz"style="background-color: salmon">PC 3</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+			<td class="matriz">DATO</td>
+		</tr>
+	</table>
+	<p>Esta tabla la hice utilizando la clase anterior de estilos 'matriz' y cambiandole a algunas celdas el formato con 'rowspan' y 'colspan' y poniendoles color.</p>
+</body>
+</html>

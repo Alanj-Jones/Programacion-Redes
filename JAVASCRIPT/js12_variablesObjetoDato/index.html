@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8" http-equiv="Content-Type" content="text/html">
+	<title>Ej 12: Variables Objeto dato</title>
+	<style type="text/css">
+		body{
+			height: 100%;
+			width: 100%;
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+		}
+
+		.formPersona{
+			background-color: lime;
+			margin: auto;
+			width: 40%;
+			height: 40%;
+			justify-content: center;
+			align-content: center;
+			display: block;			
+		}
+		.control{
+			margin: auto;
+			width: 100%;
+			text-align: center;
+		}
+
+	</style>
+</head>
+<body>
+	<h1>Consignas del ejercicio</h1>
+	<h3>Declarar y hacer uso de Objetos de dato (datos de tipo objeto)
+	<br>
+	Cargar 2 personas a un array por programa
+	<br>
+	Dejar de usar la funcion prompt() para ingresar datos
+	<br>
+	Dejar de usar document.write()
+	<br>
+	Boton para cargar objeto por teclado y otra para mostrar en formato tabla el array
+	<br>
+	boton para ocultar.</h3>
+	<br>
+
+	<div class="formPersona">
+		<h2>Añadir persona.</h2>
+		<label>Nombre:</label>
+		<br>
+		<input type="text" id="name"/>
+		<br><br>
+		<label>Apellido:</label>
+		<br>
+		<input type="text" id="lname"/>
+		<br><br>
+		<label>Fecha de nacimiento:</label>
+		<br>
+		<input type="text" id="fecha" />
+		<br><br>
+		<button id="crearPersona">Crear persona</button>
+	</div>
+
+	<div class="control">
+		<h3>Control</h3>
+		<button id="ocultar">Ocultar Presentacion</button>
+		<button id="lista">Lista Personas</button>
+	</div>
+
+	<div id="presentacion" style="display: none;"></div>
+
+
+
+	<script type="text/javascript">
+		var persona = {};
+		var persona = {Nombre:"Alan", Apellido:"Jones", Fecha:"01/09/1999"};
+		var arrayPersonas = [persona];
+
+		arrayPersonas.push({Nombre:"Carlos", Apellido:"Samdi", Fecha:"10/11/1499"});
+
+
+
+		//BOTON OCULTAR PRESENTACION
+		document.getElementById("ocultar").onclick = function(){document.getElementById("presentacion").style.display= "none";
+		}
+		//BOTON LISTAR PERSONAS
+		document.getElementById("lista").onclick = function(){
+			document.getElementById("presentacion").style.display = "block";
+		}		
+		//BOTON CREAR PERSONA
+		document.getElementById("crearPersona").onclick = function(){
+			var n = document.getElementById("name").value;
+			var a =document.getElementById("lname").value;
+			var f = document.getElementById("fecha").value;
+			arrayPersonas.push({
+				Nombre: n,
+				Apellido:a,
+				Fecha: f
+				}
+			);
+			texto = texto +
+					"<tr><td>"+
+					arrayPersonas[arrayPersonas.length - 1].Nombre+
+					"</td><td>"+
+					arrayPersonas[arrayPersonas.length - 1].Apellido+
+					"</td><td>"+
+					arrayPersonas[arrayPersonas.length - 1].Fecha+
+					"</td></tr>";
+			document.getElementById("presentacion").innerHTML = texto;
+			document.getElementById("name").value = "";
+			document.getElementById("lname").value = "";
+			document.getElementById("fecha").value = "";
+			//Para Debug
+			console.log(arrayPersonas);
+		}
+
+		
+		
+		var objetoPersonas = {personas : arrayPersonas};
+		var texto ="<h1>Presentacion</h1>"  + 
+					"<table style='border-collapse: collapse;border:solid;'>";
+		objetoPersonas.personas.forEach(function(item,indice){
+			texto = texto + 
+					"<tr><td>"+
+					item.Nombre +
+					"</td><td>"+
+					item.Apellido +
+					"<td><td>"+ 
+					item.Fecha+
+					"</td></tr>";
+		});
+
+		document.getElementById("presentacion").innerHTML = texto;
+
+	//	texto = texto +"<h4>Longitud del arreglo de objetos: "+ //arrayPersonas.length;
+
+
+	</script>
+</body>
+</html>

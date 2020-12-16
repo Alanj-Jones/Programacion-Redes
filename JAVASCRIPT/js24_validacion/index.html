@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css" >
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 style="text-align: center;">Validacion de un input</h2>
+    <div class="container">
+         <form id="myForm" >
+             <label for="dia">Ingrese el dia del mes:</label>
+             <br>
+             <input id="dia" type="number" max="31" min="1"> 
+             <br>
+             <label for="mes">ingrese el mes:</label>
+             <br>
+             <input type="number" id="mes" max="12" min="1">
+             <br><br>
+             <button id="res" class="but">Reset</button>
+             <button id="send" class="but">Enviar</button>            
+         </form>
+    </div> 
+ 
+    <script type="text/javascript" src="script.js"></script>
+    
+</body>
+</html>

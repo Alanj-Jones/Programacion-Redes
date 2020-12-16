@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej24</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div class="top">
+            <header>Turnos</header>         
+            <input type="text" id="orden" name="orden" placeholder="IdTurno" readonly value="IdTurno">
+            <button id="load" onclick="cargaTabla();">Cargar datos</button>
+            <button id="delete">Borrar</button>
+            <button id="limpiarInputs">Limpiar Filtros</button>
+    </div>
+    <div class="tableContainer">
+
+        <table>
+            <thead>
+                <tr>
+                    <th id="thTurnoId" campo-dato="turnos_IdTurno">Id del turno</th>
+                    <th id="thTurnoApDr" campo-dato="turnos_ApellidoDr">Apellido Dr.</th>
+                    <th id="thTurnoMat" campo-dato="turnos_Matricula">N° Matricula</th>                    
+                    <th id="thTurnoEspec" campo-dato="turnos_Especialidad">Especialidad</th>
+                    <th id="thTurnoApPa" campo-dato="turnos_ApellidoPaciente">Apellido del paciente</th>
+                    <th id="thTurnoFeTu" campo-dato="turnos_FechaTurno">Fecha hora del turno</th>
+                </tr>
+
+                <tr id="inputsFiltro">
+                    <th campo-dato="turnos_IdTurno">
+                        <input id="filtroIdTurno"  type="text">
+                    </th>
+                    <th campo-dato="turnos_ApellidoDr">
+                        <input id="filtroApellidoDr"  type="text">
+                    </th>
+                    <th campo-dato="turnos_Matricula">
+                        <input id="filtroMatricula"  type="text">
+                    </th>                    
+                    <th campo-dato="turnos_Especialidad">
+                        <input id="filtroEspecialidad"  type="text">
+                    </th>
+                    <th campo-dato="turnos_ApellidoPaciente">
+                        <input id="filtroApellidoPaciente"  type="text">
+                    </th>
+                    <th campo-dato="turnos_FechaTurno">
+                        <input id="filtroFechaTurno"  type="text">
+                    </th>
+                </tr>
+            </thead>
+            <tbody id="tbDatos"></tbody>
+            <tfoot>
+                <tr>
+                    <td campo-dato="turnos_IdTurno">Id del turno</td>
+                    <td campo-dato="turnos_ApellidoDr">Apellido Dr.</td>
+                    <td campo-dato="turnos_Matricula">N° Matricula</td>
+                    <td campo-dato="turnos_Especialidad">Especialidad</td>
+                    <td campo-dato="turnos_ApellidoPaciente">Apellido del paciente</td>
+                    <td campo-dato="turnos_FechaTurno">Fecha hora del turno</td>
+                </tr>
+
+            </tfoot>
+
+        </table>
+    </div>
+    <h2 id="cantRegistros"></h2>
+
+    <footer>Pie</footer>
+    <script src="../jquery.js"></script>
+    <script>
+        //$("#load").click(function(){
+        function cargaTabla(){
+            $("#tbDatos").empty();
+            $("#tbDatos").html("<p>Esperando respuesta....></p>")
+            var objAjax = $.ajax({
+                type:"get",
+                url:"datosConexion.php",
+                data:{
+                    orden: $("#orden").val(),
+                    filtroIdTurno : $("#filtroIdTurno").val(),
+                    filtroApellidoDr : $("#filtroApellidoDr").val(),
+                    filtroMatricula : $("#filtroMatricula").val(),
+                    filtroEspecialidad : $("#filtroEspecialidad").val(),
+                    filtroApellidoPaciente : $("#filtroApellidoPaciente").val(),
+                    filtroFechaTurno : $("#filtroFechaTurno").val()
+                },
+                success: function(respuestaDelServer,estado){
+                    $("#tbDatos").empty();
+                    console.log(respuestaDelServer);
+                    objJson = JSON.parse(respuestaDelServer);
+                    var objTbDatos = $("#tbDatos");
+                    objJson.turnos.forEach(function(argValor,argIndice){
+                        var objTr = document.createElement("tr");
+                        objTr.setAttribute("class","DB");
+                        
+
+                        var objTdId = document.createElement("td");
+                       // objTdId.setAttribute("class","DB");
+                        objTdId.setAttribute("campo-dato","turnos_IdTurno");
+                        objTdId.innerHTML= argValor.IdTurno;
+
+                        var objTdApellidoDr = document.createElement("td");
+                        //objTdApellidoDr.setAttribute("class","DB");
+                        objTdApellidoDr.setAttribute("campo-dato","turnos_ApellidoDr");
+                        objTdApellidoDr.innerHTML= argValor.ApellidoDr;
+
+                        var objTdMatricula = document.createElement("td");
+                        //objTdMatricula.setAttribute("class","DB");
+                        objTdMatricula.setAttribute("campo-dato","turnos_Matricula");
+                        objTdMatricula.innerHTML= argValor.Matricula;
+
+                        var objTdEspecialidad = document.createElement("td");
+                       // objTdEspecialidad.setAttribute("class","DB");
+                        objTdEspecialidad.setAttribute("campo-dato","turnos_Especialidad");
+                        objTdEspecialidad.innerHTML= argValor.Especialidad;
+
+                        var objTdApellidoPaciente = document.createElement("td");
+                       // objTdApellidoPaciente.setAttribute("class","DB");
+                        objTdApellidoPaciente.setAttribute("campo-dato","turnos_ApellidoPaciente");
+                        objTdApellidoPaciente.innerHTML= argValor.ApellidoPaciente;
+
+                        var objTdFechaTurno = document.createElement("td");
+                        //objTdFechaTurno.setAttribute("class","DB");
+                        objTdFechaTurno.setAttribute("campo-dato","turnos_FechaTurno");
+                        objTdFechaTurno.innerHTML= argValor.FechaTurno;
+
+
+                        objTr.append(objTdId,objTdApellidoDr,objTdMatricula,objTdEspecialidad,objTdApellidoPaciente,objTdFechaTurno);
+                        
+                        objTbDatos.append(objTr);                        
+                    });
+                    $("#tbDatos").append(objTbDatos);
+                $("#cantRegistros").html("Nro de registros: " + objJson.turnos.length);
+                }
+
+            });
+        };
+
+        $("#delete").click(function(){
+            $("#tbDatos").empty();
+        });
+
+
+
+        $(document).ready(function(){
+            $("#thTurnoId").click(function(){
+                $("#orden").val("IdTurno");
+                cargaTabla();
+            });
+        });
+
+        $(document).ready(function(){
+            $("#thTurnoMat").click(function(){
+                $("#orden").val("Matricula");
+                cargaTabla();
+            });
+        });
+
+        $(document).ready(function(){
+            $("#thTurnoApDr").click(function(){
+                $("#orden").val("ApellidoDr");
+                cargaTabla();
+            });
+        });
+
+        $(document).ready(function(){
+            $("#thTurnoEspec").click(function(){
+                $("#orden").val("Especialidad");
+                cargaTabla();
+            });
+        });
+
+        $(document).ready(function(){
+            $("#thTurnoApPa").click(function(){
+                $("#orden").val("ApellidoPaciente");
+                cargaTabla();
+            });
+        });
+
+        $(document).ready(function(){
+            $("#thTurnoFeTu").click(function(){
+                $("#orden").val("FechaTurno");
+                cargaTabla();
+            });
+        });
+
+
+        $("#limpiarInputs").click(function(){
+            $("#filtroIdTurno").val("");
+            $("#filtroApellidoDr").val("");
+            $("#filtroMatricula").val("");
+            $("#filtroEspecialidad").val("");
+            $("#filtroApellidoPaciente").val("");
+            $("#filtroFechaTurno").val("");
+
+
+        });
+        
+    </script>
+</body>
+</html>

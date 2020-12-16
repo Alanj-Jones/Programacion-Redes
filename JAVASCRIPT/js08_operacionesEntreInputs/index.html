@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8" http-equiv="Content-Type" content="text/html">
+	<title>Ej 8 Operaciones entre inputs</title>
+	<link rel="stylesheet" type="text/css" href="estilos.css">
+</head>
+<body>
+	<h3>Introducir un valor en los cuadros de texto y luego pulsar el boton para ejecutar la funcion correspondiente</h3>
+
+	<div class="container">
+		<label>Entrada 1</label>
+		<input id="e1" type="number" />
+		<br>
+		<label>Entrada 2</label>
+		<input id="e2" type="number" />
+		<br>
+		<label>Entrada 3</label>
+		<input id="e3" type="number" />
+		<br>
+		<label>Resultado:</label>
+		<input id="res" type="number" readonly="" />		
+	</div>
+	<br>
+	<button id="suma">Suma</button>
+	<button id="promedio">Promedio</button>
+	<button id="mayor">Mayor</button>
+
+	<script type="text/javascript">
+		//SUMA
+		  document.getElementById("suma").onclick = function(){
+            document.getElementById("res").value = parseInt(
+            	document.getElementById("e1").value) + parseInt(
+            	document.getElementById("e2").value) + parseInt(
+            	document.getElementById("e3").value);
+        }
+        //PROMEDIO
+         document.getElementById("promedio").onclick = function(){
+            document.getElementById("res").value = (
+            	parseInt(document.getElementById("e1").value) 
+            	+ parseInt(document.getElementById("e2").value) 
+            	+ parseInt(document.getElementById("e3").value))
+            	/3;
+        }
+        //MAYOR
+        document.getElementById("mayor").onclick = function(){
+            var mayor = parseInt(document.getElementById("e1").value);
+            if (parseInt(document.getElementById("e2").value) > mayor){
+                mayor = parseInt(document.getElementById("e2").value);
+            }
+            if (parseInt(document.getElementById("e3").value) > mayor){
+                mayor = parseInt(document.getElementById("e3").value);
+            }
+
+            document.getElementById("res").value = mayor;
+        }
+	</script>
+</body>
+</html>

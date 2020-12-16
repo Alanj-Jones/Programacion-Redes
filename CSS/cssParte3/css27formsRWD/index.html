@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8" http-equiv="Content-Type" content="html/text">
+	<title>Css 27: Forms Responsive Web Design</title>
+	<link rel="stylesheet" type="text/css" href="estilos.css">
+</head>
+<body>
+	<h1>Formularios</h1>
+	
+	<form action="respuestaFormulario.html" target="_blank" method="get">
+		<div class="line">
+			<div class="lineElement">
+				<label for="apellido">Apellido:</label>
+				<br>
+				<input type="text" name="apellido">
+			</div>
+			<div class="lineElement">
+				<label for="name">Nombre:</label>
+				<br>
+				<input type="text" name="name">
+			</div>
+			<div class="lineElement">
+				<label for="pass">Contraseña:</label>
+				<br>
+				<input type="password" name="pass">
+			</div>
+			<div class="lineElement">
+				<label for="unable">Campo deshabilitado:</label>
+				<br>
+				<input type="text" name="unable" placeholder="valor deshabilitado" disabled="disabled">
+			</div>
+			<div class="lineElement">
+				<label for="fecha">Fecha y Hora:</label>
+				<br>
+				<input type="datetime-local" name="fecha">
+			</div>
+
+		</div>
+		<div class="line">
+			<div class="lineElement">
+				<label for="dni">DNI:</label>
+				<br>
+				<input type="number" name="DNI">
+			</div>
+			<div class="lineElement">
+				<label for="check">Actividades Extracurriculares:</label>
+				<br>
+				<input type="Checkbox" name="check">Musica
+				<br>
+				<input type="Checkbox" name="check">Pintura
+				<br>
+				<input type="Checkbox" name="check">Deporte
+				<br>
+				<input type="Checkbox" name="check">Teatro
+			</div>
+			<div class="lineElement">
+				<label for="sexo">Sexo:</label>
+				<br>
+				<input type="radio" name="sexo">Masculino
+				<br>
+				<input type="radio" name="sexo">Femenino
+			</div>
+			<div class="lineElement"><b>VACIO</b></div>
+			<div class="lineElement">
+				<label for="sel">Estudios cursados</label>
+				<br>
+				<SELECT >
+					<option>Primarios</option>
+					<option>Secundarios</option>
+					<option>Terciarios</option>
+					<option>mas....</option>
+				</SELECT>
+			</div>			
+		</div>
+
+		<div class="line">
+			<div class="lineElement">
+				<label for="area">Area de desempeño</label>
+				<br>
+				<SELECT >
+					<option>Administracion</option>
+					<option>Recepcion</option>
+					<option>Taller</option>
+					<option>Otro</option>
+				</SELECT>
+			</div>
+			<div class="lineElement">
+				<label for="turno">Turno</label>
+				<br>
+				<SELECT >
+					<option>Mañana</option>
+					<option>Tarde</option>
+					<option>Noche</option>
+					
+				</SELECT>
+			</div>
+			<div class="lineElement">
+				<label for="drive">Conduce</label>
+				<br>
+				<input type="radio" name="drive">Si
+				<br>
+				<input type="radio" name="drive">No
+			</div>
+			<div class="fillerElement"></div>
+		</div>
+		<div class="barraControl">
+			<input type="Submit" name="send" placeholder="Enviar">
+			<input type="reset" name="res" placeholder="Reset">
+		</div>
+		<br><br><br><br>
+	</form>
+	<footer>PIE DE FORMULARIO</footer>	
+</body>
+</html>

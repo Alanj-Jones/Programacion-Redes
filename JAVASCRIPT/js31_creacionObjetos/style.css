@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+body,html{
+    height: 100%;
+}
+div.container{
+    margin:auto;
+    width: 50%;
+    height: 50%;    
+    background-color: lightpink;
+    overflow: auto;
+    padding: 20px;
+    position:relative;
+    top: 20%;
+}
+button{
+    position: relative;  
+    left: 40%;
+    height: 25px;
+    width: 80px;;
+}
+div.inside{
+    display:block;
+    background-color: darkorchid;
+    float:left;
+    width: 50%;
+    height: 25%;
+    border: solid coral;
+}

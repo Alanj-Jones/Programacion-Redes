@@ -1,0 +1,52 @@
+*{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body,html{
+	height: 100%;
+	width: 100%;
+}
+
+div.mainContenedor{
+	height: 100%;
+	width: 70%;
+	background-color: lightblue;
+	margin: auto;
+}
+
+div.clase1{
+	position: absolute;
+	background-color: cyan;
+	top:50%;
+	width: 150px;
+	height: 250px;
+	overflow: hidden;
+}
+
+div.clase2{
+	
+	position: absolute;
+	background-color: purple;
+	top: 60%;
+	left: 65%;
+	height: 200px;
+	width: 20%;
+	overflow: auto;
+}
+img{
+	max-height: 150px;
+	max-width: 80px;
+}
+
+div.clase3{
+	opacity: 0.5;
+	background-color: black;
+	color: white;
+	position: absolute;
+	top: 35%;
+	left: 50%;
+	width: 20%;
+	height: 225px;
+	overflow: auto;
+}

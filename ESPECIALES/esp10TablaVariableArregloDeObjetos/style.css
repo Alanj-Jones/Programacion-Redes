@@ -1,0 +1,71 @@
+body,html{
+    height: 100vh;
+    width: 100vh;
+    background-color: darksalmon;
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}   
+
+div.topContainer{
+    display: inline-flex;
+    justify-content: center;
+    margin-left: 35vw;
+}
+button{
+    width: 10vw;
+    margin-left: 2vw;    
+}
+
+footer{
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    text-align: center;
+    font-size: 2em;
+}
+
+table.myTable{
+    margin-top: 1vh;
+    border-style: solid;
+    border-color: black;
+    height: 80%;
+    width: 100%;
+    border-collapse: collapse;
+    display: block;
+   
+}
+table.myTable thead tr th,
+table.myTable tfoot tr th{
+    height: 8vh;
+    width: 16.5vw;
+    border-right: solid;
+    border-top: solid;
+    border-bottom: solid;
+       
+}
+tfoot{
+    height: 8vh;
+    border-right: solid;
+    border-top: solid;
+    border-bottom: solid;
+    width: 100%;
+     
+}
+div.container{
+    width: 100vw;
+    height: 75vh;
+}
+tbody{
+    background: lightgreen;
+    height: 60vh;
+    width: 100%;
+    overflow-y: scroll;
+
+    
+}
+tbody tr td{
+    height: 5vh;
+    position: relative;
+    width: auto;    
+}

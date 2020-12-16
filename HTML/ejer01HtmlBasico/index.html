@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+	<title>Ejercicio 1 HTML BASICO</title>
+</head>
+<body>
+	<h1>Primer parrafo hecho con la etiqueta H1 y con un salto de linea.</h1>
+	<br>
+	<h2>Segundo parrafo corto hecho con H2 y con un salto de linea.</h2>
+	<br>
+	<h3>Grupo de elementos de navegacion:</h3>
+	<ul>
+		<li><a href="https://3523.campusinstituto.com.ar/" target="_blank">Campus UB</a></li>
+		<li><a href="https://conectate.ub.edu.ar/Home.aspx" target="_blank">Conectate UB</a></li>
+		<li><a href="http://www.ub.edu.ar/" target="_blank">Pagina de la Universidad de Belgrano</a></li>
+		<li><a href="https://prog-redes.herokuapp.com/" target="_blank">Indice de Ejercicios</a></li>				
+	</ul>
+	<hr>
+	<a href="pagMismaPestaña.html">Enlace a una pagina dentro de la misma pestaña.</a>
+	<br>
+	<a href="pagOtraPestaña.html" target="_blank">Enlace a otra pagina en nueva pestaña.</a>
+	<br>
+	<a href="#Ancla">Ancla a otro punto de esta pagina.</a>
+	<hr>
+
+	<h2>Cuerpo principal del contenido</h2>
+	<main>La etiqueta main es en HTML5 una etiqueta semantica. Esto quiere decir que tiene que ver con el significado del contenido dentro de ella. Define el contenido principal de la pagina. Unicamente puede haber una sola etiqueta como esta en todo el documento.
+		<br>
+		El contenido escrito aqui dentro no se repite en el resto del sitio.
+		<br>
+		Conviene usar aqui textos que ayudan a encontrar la pagina luego de procesos de indexacion de los buscadores.
+	</main>
+
+	<h2>Seccion de etiquetas semantica estructurales mas importantes:</h2>
+	<ul>
+		<li>HEADER</li>
+		<li>FOOTER</li>
+		<li>SECTION</li>
+		<li>ARTICLE</li>
+		<li>NAV</li>
+		<li>ADDRESS</li>
+	</ul>
+		<h2>Reglas para etiquetas semanticas:</h2>
+	<ul>
+		<li>Los distintos tipos de contenido se pueden asociar a las etiquetas SECTION</li>
+		<li>Las unidades de contenido se asocian a las etiquetas ARTICLE. O sea que un SECTION anida multiples ARTICLES.</li>
+		<li>Las etiquetas HEADER y FOOTER pueden ser anidadas dentro de otras HEADER o FOOTER. O sea un FOOTER podria anidar otro HEADER y FOOTER.</li>
+		<li>La etiqueta NAV debe ser unica en todo el documento y corresponde a los elementos de navegacion del documento</li>
+		<li>Reservar la etiqueta H1 para usar dentro de etiquetas top level como main, header o footer.</li>
+	</ul>
+
+	<hr>
+
+	<h3>Seccion de imagenes</h3>
+	<img src="https://i.pinimg.com/236x/1c/b7/c6/1cb7c61e0b2801ff509f1b9215f74dd4--cute-black-cats-black-kittens.jpg">
+	<p>Es una imagen de un gato de una resolucion de ancho de 236px y de alto de 381px.</p>
+	<p>Misma imagen con distintos valor de 'Width'</p>
+	<img src="https://i.pinimg.com/236x/1c/b7/c6/1cb7c61e0b2801ff509f1b9215f74dd4--cute-black-cats-black-kittens.jpg" width="150px" height="381px">
+	<img src="https://i.pinimg.com/236x/1c/b7/c6/1cb7c61e0b2801ff509f1b9215f74dd4--cute-black-cats-black-kittens.jpg" width="225px" height="381px">
+	<img src="https://i.pinimg.com/236x/1c/b7/c6/1cb7c61e0b2801ff509f1b9215f74dd4--cute-black-cats-black-kittens.jpg" width="275px" height="381px">
+	<img src="https://i.pinimg.com/236x/1c/b7/c6/1cb7c61e0b2801ff509f1b9215f74dd4--cute-black-cats-black-kittens.jpg" width="350px" height="381px">
+	<img src="https://i.pinimg.com/236x/1c/b7/c6/1cb7c61e0b2801ff509f1b9215f74dd4--cute-black-cats-black-kittens.jpg" width="375px" height="381px">
+
+	<hr>
+	<h2>Seccion de Video</h2>
+	<video width="320" height="240" controls>
+		<source src="gatoVid.mp4" type="video/mp4">
+	</video>
+
+	<h3 id="Ancla">Anlca</h3>
+	<p>Punto de anclado !</p>
+
+	<h2>Datos del alumno</h2>
+	<p>	Nombre: Alan Javier Jones
+		<br>
+		Mail: Alanj.jones@comunidad.ub.edu.ar
+		<br>
+		Materia: PROGRAMACION EN AMBIENTE DE REDES 
+		<br>
+		Turno: Noche
+		<br>
+		Profesor: Gustavo Wittbecker
+	</p>
+</body>
+</html>

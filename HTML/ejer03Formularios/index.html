@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio 3: Formularios</title>
+	<style type="text/css">
+		li{
+			margin-top: 10px;
+		}
+		label{
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+	<h2>Formulario para entradas sin validacion</h2>
+	<form action="respuestaFormulario.html" target="_blank" method="get">
+		<ul>
+			<li>
+				<label for="apellido">Apellido:</label> 
+				<br>
+				<input type="text" name="apellido" id="apellido" value="" autofocus="auto"/>
+			</li>
+			<li>
+				<label for="password">Contraseña:</label>
+				<br>
+				<input type="password" id="password" name="password" value=""/>
+			</li>
+			<li>
+				<label for="oculto">Oculto:</label>
+				<br>
+				<input type="hidden" id="oculto" name="oculto" value=""/>
+			</li>
+			<li>
+				<label for="disabed">Campo deshabilitado:</label>
+				<br>
+				<input type="text" id="disabled" name="disabled" value="Valor Deshabilitado" disabled="disabled"/>
+			</li>
+			<li>
+				<label for="lectura">Campo de solo lectura:</label>
+				<br>
+				<input type="text" id="lectura" name="lectura" value="Valor Solo Lectura" readonly="readonly"/>
+			</li>
+			<li>
+				<label for="deportes">Practica deportes</label>
+				<br>
+				<input type="checkbox" id="deportes" name="deportes" value=""/>
+			</li>
+			<li>
+				<label for="musica">Practica musical</label>
+				<br>
+				<input type="checkbox" id="musica" name="musica" value=""/>
+			</li>
+			<li>
+				<label for="pintura">Practica de pintura artistica</label>
+				<br>
+				<input type="checkbox" id="pintura" name="pintura" value=""/>
+			</li>
+			<li>
+				<label for="sexo">Sexo</label>
+				<br>
+				Masculino
+				<input type="radio" id="sx1" name="sexo" value="" checked="" />
+				Femenino
+				<input type="radio" id="sx2" name="sexo" value=""/>
+			</li>
+			<li>
+				<label for="estudios">Estudios cursados</label>
+				<br>
+				<select id="estudios" name="estudios">
+					<option value="pri" selected="selected">Primarios</option>
+					<option value="sec">Secundarios</option>
+					<option value="ter">Terciarios</option>
+					<option value="uni">Universitarios</option>
+					<option value="pos">Postgrado</option>
+				</select>
+			</li>
+			<li>
+				<label for="fecha">Fecha y Hora</label>
+				<br>
+				<input type="date" id="date" name="fecha" value=""/>
+				<input type="time" id="hour" name="fecha" value="" />
+			</li>
+			<li>
+				<label for="color">Color</label>
+				<br>
+				<input type="color" id="color" name="color" value=""/>
+			</li>
+			<li>
+				<input type="submit" id="submit" name="submit" value="Enviar a Formulario sin validacion"/>
+			</li>
+			<li>
+				<input type="reset" name="reset" id="reset" value="Reset a valores predetereminados"/>
+			</li>
+		</ul>
+	</form>
+
+	<h2>Formulario para entradas con validacion</h2>
+	<form action="respuestaFormulario.html" target="_blank" method="get">
+		<ul>
+			<li>
+				<label for="comentario">Comentario(Validacion por requerido)</label>
+				<br>
+				<input type="text" name="comentario" id="com" value="" required="required"/>
+			</li>
+			<li>
+				<label for="mail">Email con doble validacion(x@x y Required):</label>
+				<br>
+				<input type="Email" name="mail" id="mail" value=""	required="required" placeholder="texto@texto"/>
+			</li>
+			<li>
+				<label for="entero">Numero entero limitado (Validacion por tipo numero y cotas)</label>
+				<br>
+				<input type="number" name="entero" id="integer" value="" placeholder="Entre 1 y 5" min="1" max="5"/>
+			</li>
+			<li>
+				<label for="decimal">Numero decimal:</label>
+				<br>
+				<input type="number" name="decimal" id="decimal" value="" min="1" max="9" step="0.1" />
+			</li>
+			<li>
+				<label for="url">URL(validacion por requerido, escribir http://</label>
+				<br>
+				<input type="url" name="url" id="url" value="" placeholder="http://" required="required" />
+			</li>
+			<li>
+				<label for="pat">Pattern de validacion:</label>
+				<br>
+				<input type="text" name="pat" id="pat" value=""/ pattern="[a-z]{3}[1-2]{2}" title="3 Letras y 2 Numeros que sean 1 o 2 solamente"/>
+			</li>
+			<li>
+				<label for="fono">Pattern de validacion:</label>
+				<br>
+				<input type="phone" name="fono" id="fono" value="" pattern="[(]{1}[+]{1}[5]{1}[4]{1}[)]{1}[' ']{1}[1]{2}[' ']{1}[1-9]{8}" title="(+54) 11 xxxxxxxx" />
+			</li>
+			<li>
+				<input type="submit" id="submit" name="submit" value="Enviar a Formulario con validacion"/>
+			</li>
+			<li>
+				<input type="reset" name="reset" id="reset" value="Reset a valores predetereminados"/>
+			</li>
+		</ul>
+
+	</form>
+
+</body>
+</html>

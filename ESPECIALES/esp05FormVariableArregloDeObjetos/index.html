@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio especial 1</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <h1>Formulario de ALTA</h1>
+    <div class="container">
+        <form action="./respuesta.html" name="Formulario" target="_blank" class="myForm">
+            <div class="left">
+                <label for="codArt">Codigo del Articulo</label>
+                <br>
+                <input name="codArt" type="numeber" max="999" min="1" required placeholder="Entre 1 y 999">
+            </div>
+           
+            <br>
+            <div class="right">
+                <label for="famArt">Familia de Articulo</label>
+                <br>
+                <select id="mySelect" required name="famArt">
+                    
+
+                </select> 
+            </div>
+            
+            <br>
+            <div class="left">
+                <label for="famArt">Descripcion</label>
+                <br>
+                <input type="text" name="famArt" required>
+            </div>
+            
+            <br>
+            
+            <div class="right">
+                <label for="feAlta">Fecha Alta</label>
+                <br>
+                <input name="feAlta" type="date" required>
+            </div>
+            
+            <br>
+
+            <div class="left">
+                <label for="mStock">Stock</label>
+                <br>
+                <input name="nStock" max="10000" min="0" required>
+            </div>
+            
+            <br>
+            <div class="right">
+                <label for="sub"></label>
+                <input name="sub" type="submit">
+            </div>
+            
+            <br>
+        </form>
+    </div>
+    
+    
+    
+    
+    
+    <footer>PIE DEL FORMULARIO</footer>
+    
+    <script src="../jquery.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
